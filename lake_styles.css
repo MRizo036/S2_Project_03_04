@@ -24,33 +24,95 @@
    Filename: lake_styles.css
 
 */
-/* Section Styles */
+/* Structural Styles */
 html {
     background-color: rgb(162, 202, 236);
 }
 
 body {
-    background-color: white;
+    background-color: rgba(175, 255, 231, 0.87);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 header {
-    background-color: rgb(234, 245, 240);
+    background-color: rgba(175, 255, 231, 0.87);
 }
 
 p {
-    padding-top: 0.9px;
+    padding: 0.9px 20px 0.9px 20px;
+    font-size: 1.1em;
+}
+
+h1 {
+    font-family: Champagne;
+    font-size: 5em;
+    margin: 10px;
+}
+
+section#leftcol {
+    background-color: white;
 }
 
 nav {
-    padding: 10px;
-    font-size: 1.15em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.1em;
+}
+
+nav>ul {
+    padding-left: px;
+    list-style: none;
     text-decoration: none;
+    line-height: 1.7em;
+}
+
+nav>ul>li>a:visited,
+nav>ul>li>a:link {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.637);
+}
+
+nav>ul>li>a:active,
+nav>ul>li>a:hover {
+    color: rgb(245, 199, 50);
+}
+
+
+section#rightcol h2 {
+    font-size: 3em;
+    font-family: Champagne;
+    margin: 10px;
+    padding-top: 10px;
+    list-style: none;
 
 }
 
+aside {
+    background-color: rgb(217, 247, 148);
+    font-size: 0.8em;
+    padding-left: 20px;
+}
+
 footer {
-    background-color: rgb(234, 245, 240);
+    background-color: rgba(175, 255, 231, 0.87);
+    color: rgba(17, 24, 21, 0.719);
     text-align: center;
 
+}
+
+blockquote {
+
+    color: black;
+    font-size: 2em;
+    font-family: Champagne;
+    padding-top: 2px;
+    margin: 0px;
+}
+
+blockquote::before {
+    content: open-quote;
+}
+
+blockquote::after {
+    content: close-quote;
 }
