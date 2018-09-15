@@ -1,15 +1,10 @@
-﻿@charset "utf-8";
-
+﻿/* States the character encoding of the document */
+@charset "utf-8";
+/* Allows the programmer to brin in an outside font. */
 @font-face {
     font-family: Champagne;
     src: url('cac_champagne.woff ') format('woff'),
         url('cac_champagne.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: Dobkin;
-    src: url('DobkinPlain.woff') format('woff'),
-        url('DobkinPlain.ttf') format('truetype');
 }
 
 /*
@@ -18,66 +13,108 @@
    Case Problem 4
    
    Great Lakescape Lodge Style Sheet
-   Author: 
-   Date:   
+   Author: Maria De Jesus Rizo
+   Date:   9.12.18
    
    Filename: lake_styles.css
 
 */
-/* Structural Styles */
-html {
-    background-color: rgb(162, 202, 236);
-}
 
+/* Structural Styles */
+/* Styles within this section will be applies to the structural elements of the HTML document. */
+/* The selector below states that the properties written within will be applied to the entire HTMLdocument content. In this case, the Background image style will be applied to the entire webpage. The Background Image property allows you to insert an image that will be placed in the webpages backgroud. Within that, the Linear Gradiemt allows for the you to insert a gradient in the backgorund of the page with the color of your choice.   */
+html {
+    background-image: linear-gradient(rgb(59, 147, 230), rgb(174, 218, 243));
+}
+/* The selector below states that all properties within will be applied to the body content of the HTML document. The background color property specifies the color of the body element in the HTML document, overwriting any previous baground color style written, in this case overwriting the Background image value set in the HTML selector. The font family property provides the font that will be used in all text within the body unless states otherwise.*/
 body {
     background-color: rgba(175, 255, 231, 0.87);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-
+/* The selector below states that all properties within will be applied to the header content in the HTML document. Similar to what happened in the selector above, the background color specifies in this selector will overwrite all other specified colors in the CSS document so far due to specificity. */
 header {
-    background-color: rgba(175, 255, 231, 0.87);
+    background-color:rgba(134, 210, 240, 0.87);
+}
+/* The selector below states that properties within the selctor will be applied to the footer content in the HTMl document. The color property specifies the color of the text within the footer. the text align property specifies that the text should be alligned horizontally in the center of the footer. The padding property applies padding to around the text within the HTML footer. */
+footer {
+    background-color: rgba(134, 210, 240, 0.87);
+    color: rgba(17, 24, 21, 0.719);
+    text-align: center;
+    padding: 10px 0px 10px 0px;
 }
 
-p {
-    padding: 0.9px 20px 0.9px 20px;
-    font-size: 1.1em;
-}
-
+/* Heading Styles */
+/* Styles within this section will be applied to the heading elements of the HTML document. */
+/* The selector below states that properties within will be applied to the h1 element in the HTML document. The font family property specifies what font the text within this element should be, overwriting what was previously set as the font within the body selector. The font size property specifies the size of the text within this section. The margin property applies a margin around the text in this section. Lastly the text shadow element provides a shadow for the text within this section (written using CSS Tricks for help). */
 h1 {
     font-family: Champagne;
     font-size: 5em;
     margin: 10px;
+    text-shadow: 2px 2px 2px  rgb(131, 129, 127);
 }
-
-section#leftcol {
-    background-color: white;
+/* The selectro below states that all properties within will be applied to the h2 elements in the HTML document. */
+h2{
+    text-shadow: 2px 2px 2px  rgb(131, 129, 127);
 }
-
+/* Navigation Styles */
+/* Styles within this section will be applied to the navigation elements of the HTML document.  */
+/* The selector below states that all properties within will affect the nav elements in the HTML document. */
 nav {
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 1.1em;
 }
-
+/* Unlike the styles from above. the selector states that properties within will be applied to all ul elements nested within a navigation element. The list style property allows you to chose how the bullets in a list will look, in this case however, bullets are removed. The text decoration property allows for decorations such as underlining the text, in this case however, removing the underline from the links. The line height property specifies the space placed between lines of text. */
 nav>ul {
-    padding-left: px;
     list-style: none;
     text-decoration: none;
     line-height: 1.7em;
 }
-
+/* /* The selector below states that properties within will be applied to the a element nested within the li element nested within the ul element nested within the nav element in the HTML document. The :visited and :link pseudo classes define the state of the link in which the properties will be applied to.*/
 nav>ul>li>a:visited,
 nav>ul>li>a:link {
     text-decoration: none;
-    color: rgba(0, 0, 0, 0.637);
+    color:black;
 }
-
+/* The comment above applied to this selceto as well, the only difference being the states being defined which are now :active and :hover. */
 nav>ul>li>a:active,
 nav>ul>li>a:hover {
-    color: rgb(245, 199, 50);
+    color:  rgba(151, 148, 148, 0.637);
 }
-
-
+/* Paragraph Styles */
+/* Styles within this section will be applied to all paragraoh elements within the HTMl document. */
+/* The selector below states that properties within will be applied to all paragraph elements within the HTML document. */
+p {
+    padding: 0.9px 20px 0.9px 20px;
+    font-size: 1.1em;
+}
+/* Aside Styles */
+/* Styles within this section will be applied to all aside elements within the HTML document. */
+/* The selector below states that all properties within will be applies to aside elements in the HTML document. The box shadow property attaches drop shadows onto a box of text in a webpage. */
+aside {
+    background-color: rgba(175, 255, 231, 0.87);
+    font-size: 0.8em;
+    box-shadow: 5px 5px 5px  rgb(131, 129, 127);
+}
+/* The selector below states that properties within will be applied to li elements in the HTML documnet nested within the ul element nested within the nav element. */
+aside>ul>li{
+    font-size: 1.2em;
+}
+/* The selector below states that all properties within will be applied to h1, h2, and p elements within the HTML document that are nested within an aside element. */
+aside>h1, h2, p{
+    text-align: center;
+}
+/* Section Styles */
+/* Styles within this section will be applied towards all section elements within the HTML document. */
+/* The selector below states that properties within will affect section elements with the id of #leftcol. */
+section#leftcol {
+    background-color: white;
+}
+/* The selector below states that properties within will affect p elements nested within section elements with the id of #leftcol. */
+section#leftcol p{
+    text-align: left;
+}
+/* The selector below states that properties within will affect h2 elements nested within section elements with the id of #rigthtco.l */
 section#rightcol h2 {
     font-size: 3em;
     font-family: Champagne;
@@ -86,20 +123,9 @@ section#rightcol h2 {
     list-style: none;
 
 }
-
-aside {
-    background-color: rgb(217, 247, 148);
-    font-size: 0.8em;
-    padding-left: 20px;
-}
-
-footer {
-    background-color: rgba(175, 255, 231, 0.87);
-    color: rgba(17, 24, 21, 0.719);
-    text-align: center;
-
-}
-
+/* Blockquote Styles */
+/* Styles within this section will be applied to all bodyquote elements within the HTML document. */
+/* The selector below states that properties within will be applied to blcokquote elements within the HTML document. */
 blockquote {
 
     color: black;
@@ -107,12 +133,14 @@ blockquote {
     font-family: Champagne;
     padding-top: 2px;
     margin: 0px;
+    text-shadow: 2px 2px 2px  rgb(131, 129, 127);
 }
-
+/* The selector below states that properties within will be applied to blockquote in the HTMl document. The ::before psuedo element states that properties listed within the selector will go before the contents of the blockquote elements. The cotent property specifies what will be given an openning quote based on whats in the blockquote elements. */
 blockquote::before {
     content: open-quote;
 }
-
+/* The comment from above applies here as well, the only difference being that the property listed will now go after the contents of the blcokquote element. Along with that, rather than an opening quote, a closing quote is being placed.   */
 blockquote::after {
     content: close-quote;
 }
+
